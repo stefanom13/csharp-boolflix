@@ -6,8 +6,11 @@ namespace csharp_boolflix.Models
     {
         [Key]
         public int Id { get; set; }
-        public int NumeroStagione { get; set; }
+
+        [Required]
         public string TitoloStagione { get; set; }
+        public int NumeroStagione { get; set; }
+       
 
     }
 }

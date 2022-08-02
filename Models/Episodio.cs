@@ -2,7 +2,7 @@
 
 namespace csharp_boolflix.Models
 {
-    public class Episodio
+    public class Episodio : ContenutoVideo
     {
         [Key]
         public  int Id { get; set; }

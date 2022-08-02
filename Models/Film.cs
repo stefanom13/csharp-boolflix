@@ -7,5 +7,8 @@ namespace csharp_boolflix.Models
         [Key]
         public int Id { get; set; }
 
+        [Required]
+        public string NomeFilm { get; set; }
+
     }
 }

@@ -7,10 +7,14 @@ namespace csharp_boolflix.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Nome { get; set; }    
-        public bool Bambino { get; set; }    
+        public string NomeProfilo { get; set; }    
+        public bool Bambino { get; set; }
 
+        //1 M
+        public List<PlayList> PlayLists { get; set; }
 
+        // M M
+        public List<ContenutoVideo> ContenutoVideos { get; set; }
 
     }
 }
