@@ -1,4 +1,5 @@
-﻿using csharp_boolflix.Models;
+﻿using csharp_boolflix.Database;
+using csharp_boolflix.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,6 +8,7 @@ namespace csharp_boolflix.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        //private readonly BoolflixContext _context;
 
         public HomeController(ILogger<HomeController> logger)
         {
