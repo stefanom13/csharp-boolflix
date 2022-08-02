@@ -23,5 +23,9 @@ namespace csharp_boolflix.Models
 
         // M M
         public List<Profilo> Profili { get; set; }
+
+        public ContenutoVideo()
+        {
+        }
     }
 }

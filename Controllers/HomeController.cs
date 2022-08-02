@@ -7,17 +7,22 @@ namespace csharp_boolflix.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        //private readonly BoolflixContext _context;
+       // private readonly ILogger<HomeController> _logger;
+        private readonly BoolflixContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(BoolflixContext context)
         {
-            _logger = logger;
+            _context = context;
         }
-
         public IActionResult Index()
         {
-            return View();
+            List<ContenutoVideo> videoContenutiList = _context.ContenutiVideo.ToList();
+
+            Random rnd = new Random();
+            ContenutoVideo videoContent = videoContenutiList[rnd.Next(0, videoContenutiList.Count())];
+
+            ViewData["Jumbotron"] = videoContent;
+            return View("Index", videoContenutiList);
         }
 
         public IActionResult Privacy()
