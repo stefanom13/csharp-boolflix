@@ -27,7 +27,8 @@ namespace csharp_boolflix.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=BoolflixDb;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=BoolflixDb;Integrated Security=True;TrustServerCertificate=True");
+            
         }
     }
 }

@@ -11,8 +11,8 @@ using csharp_boolflix.Database;
 namespace csharp_boolflix.Migrations
 {
     [DbContext(typeof(BoolflixContext))]
-    [Migration("20220802104239_CreateTables")]
-    partial class CreateTables
+    [Migration("20220802123129_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
